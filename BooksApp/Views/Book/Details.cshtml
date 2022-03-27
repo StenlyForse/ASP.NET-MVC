@@ -1,0 +1,39 @@
+﻿@model BooksApp.Models.Book
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container p-3 my-3 border">
+    <h1>Book Details</h1>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PublishngYear)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.PublishngYear)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Style)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Style)
+    </dl>
+    <div>
+        <a class="btn btn-primary" asp-action="AddOrEdit" asp-route-Id="@Model.Id">Edit</a>
+        <a class="btn btn-danger" asp-action="Index">Back</a>
+    </div>
+</div>
